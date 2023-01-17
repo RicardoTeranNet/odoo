@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="product_normal_form_view_excclude_commisions" model="ir.ui.view">
+            <field name="name">product.normal.form.exclude_commissions</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+
+                <xpath expr="//form/sheet/notebook/page[@string='Sales']/group[1]" position="after">
+                    <group>
+                        <separator colspan="2" string="Agents/Commissions"/>
+                        <field name="commission_exent"/>
+                        <field name="product_agent_ids" nolabel="1">
+                            <tree string="Agents and Products">
+                                <field name="agent_ids"/>
+                                <field name="commission_id"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <field name="commission_id"/>
+                                    <field name="agent_ids"/>
+                                </group>
+                            </form>
+                        </field>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
