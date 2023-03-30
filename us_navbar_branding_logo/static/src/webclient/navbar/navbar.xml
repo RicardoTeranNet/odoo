@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<templates xml:space="preserve">
+
+	<t t-inherit="web.NavBar.AppsMenu" t-inherit-mode="extension" owl="1">
+		<xpath expr="//t[@t-set-slot='toggler']" position="replace">
+			<t t-set-slot='toggler'>
+				<i>
+					<img alt="Custom by UnitSoft" src="us_navbar_branding_logo/static/img/default_logo_left.png" height="32"/>
+				</i>
+				<i class="oi oi-apps">
+					<!-- <img alt="Custom by UnitSoft" src="us_navbar_branding_logo/static/img/default_logo_right.png" height="32"/>-->
+				</i>
+			</t>
+		</xpath>
+	</t>
+
+</templates>
